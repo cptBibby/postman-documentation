@@ -4,13 +4,13 @@
    Initiate a mock payment request via the admin API.
 
 2. **Receive Deposit Notification**:  
-   A deposit notification will be received on the WebSocket.
+   A deposit notification will be received on the WebSocket. (payment#userID channel)
 
 3. **Check Created Reward**:  
-   Verify that the created reward appears in both `rewards()` and `availableRewards()`.
+   Verify that the created reward appears in both `rewards()` and `availableRewards()`. 
 
 4. **Use Reward**:  
-   Use the reward with the ID obtained from the `availableRewards()` response.
+   Use the reward with the ID obtained from the `availableRewards()` response. 
 
 5. **Check Reward Status**:  
    Ensure that the same reward still appears in both `rewards()` and `availableRewards()`.
@@ -78,6 +78,6 @@
     {"subscribe":{"channel":"bms#{{softswiss_user_id}}"},"id":4}
     {"subscribe":{"channel":"payment#{{softswiss_user_id}}"},"id":5}
    
-4. Establish the Connection by clicking Send (currently it will disconnect automatically after 10 minutes)
+4. Establish the Connection by clicking Send (currently it will disconnect automatically after 10 seconds - needs to be resolved!!!)
    
   
