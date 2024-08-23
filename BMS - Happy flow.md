@@ -13,7 +13,7 @@
    Use the reward with the ID obtained from the `availableRewards()` response. 
 
 5. **Check Reward Status**:  
-   Ensure that the same reward still appears in both `rewards()` and `availableRewards()`.
+   Ensure that the same reward still appears in both `rewards()` and `availableRewards()`. (Run available reward check and Rewards history check)
 
 6. **Play Game**:  
    Play the game using the link from the `useReward()` response and end the session. *(Note: This step cannot be performed through Postman.)*
@@ -22,8 +22,8 @@
    A session finished notification will be received on the WebSocket.
 
 8. **Verify Reward Status**:  
-   - `availableRewards()` should now show no results.
-   - In `rewards()`, the reward should be listed as finished and have prizes won under the `prizes` property.
+   - `availableRewards()` should now show no results. (available reward check after game)
+   - In `rewards()`, the reward should be listed as finished and have prizes won under the `prizes` property. (Rewards history check after game)
 
 9. **Check Cashback Prizes**:  
    If any cashback prizes were won during the session, they should be shown in the `prizes()` response.
